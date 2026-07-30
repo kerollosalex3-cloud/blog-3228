@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap");
 
 * {
@@ -89,8 +90,56 @@ header {
   opacity: 1;
 }
 
+/*Footer Section Start*/
+footer {
+  margin-top: 80px;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 152px;
+  background-color: #4ea487;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.copr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 72px;
+}
+
+.copr a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Palanquin";
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+/*Footer Section End*/
+
 @media (min-width: 1441px) {
   header {
+    padding-left: calc((100vw - 1440px) / 2 + 80px);
+    padding-right: calc((100vw - 1440px) / 2 + 80px);
+  }
+
+  footer {
     padding-left: calc((100vw - 1440px) / 2 + 80px);
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
@@ -118,5 +167,70 @@ header {
   .header_img {
     width: 56px;
     height: 56px;
+  }
+
+  /*Footer Rsponsive*/
+  footer {
+    width: 100%;
+    max-width: 100%;
+    min-height: 134px;
+    height: auto;
+    margin-top: 88px;
+    padding: 30px clamp(16px, 6.4vw, 24px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: repeat(3, auto);
+    align-content: center;
+    align-items: center;
+    column-gap: clamp(8px, 3vw, 16px);
+    row-gap: 8px;
+    overflow-x: clip;
+  }
+
+  .copr {
+    display: contents;
+  }
+
+  .copr a {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .copr a:nth-child(1) {
+    grid-column: 1;
+    grid-row: 3;
+    white-space: nowrap;
+  }
+
+  .copr a:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .copr a:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .social {
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: clamp(8px, 3vw, 16px);
+    min-width: 0;
+  }
+
+  .social svg {
+    display: block;
+    width: clamp(24px, 8vw, 32px);
+    height: clamp(24px, 8vw, 32px);
+  }
+}
+
+@media (max-width: 360px) {
+  footer {
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
