@@ -138,6 +138,10 @@ textarea {
   resize: none;
 }
 
+input:focus {
+  outline: none;
+}
+
 input[type="submit"]:hover {
   background-color: #45a049;
 }
