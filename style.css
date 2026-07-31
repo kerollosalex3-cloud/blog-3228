@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 128px;
+  background-color: green;
+}
+
+h2 {
+  font-family: "Arima";
+  color: rgba(78, 164, 135, 1);
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Palanquin";
+}
+
+.yellow {
+  height: 515px;
+  background-color: rgba(241, 201, 83, 1);
+
+  padding: 0px 0px 106px 0px;
+}
+
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+
+  padding: 88px 120px 120px;
+}
+
+.highlights-title {
+  display: flex;
+  gap: 8px;
+}
+
+.faq-section {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  padding: 88px 120px 120px 120px;
+
+  font-family: "palanquin";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(84, 55, 13, 1);
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  gap: 24px;
+  padding: 88px 120px 120px 120px;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+  gap: 8px;
+}
+
+.contact-form {
+  width: 100%;
+  padding: 0px 50px;
+  color: rgba(84, 55, 13, 1);
+  font-family: "palanquin";
+  font-size: 1.5rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details-labels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-details-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: calc(90% / 2);
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: calc(90% / 2);
+}
+
+.message {
+  padding-top: 64px;
+  text-align: start;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border-top: unset;
+  border-right: unset;
+  border-left: unset;
+  border-bottom: 1px solid rgba(84, 55, 13, 1); /* Gray border */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: rgba(78, 164, 135, 1);
+
+  resize: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.terms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 50px;
+
+  font-family: "palanquin";
+  color: rgba(84, 55, 13, 1);
+  font-size: 1.125rem;
+}
+
+.terms a {
+  font-family: "palanquin";
+  font-size: 1.125rem;
+  color: rgba(78, 164, 135, 1);
+  text-decoration: none;
+}
+
+.terms a:hover {
+  font-family: "Palanquin Dark";
+}
+
+/* Customize the label (the container) */
+.terms-checkobx {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: solid 1px rgba(84, 55, 13, 1);
+}
+
+/* On mouse-over, add a grey background color */
+.terms-checkbox:hover input ~ .checkmark {
+  background-color: rgba(241, 201, 83, 1);
+}
+
+/* When the checkbox is checked, add a blue background */
+.terms-checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "Please accept the privacy policy.";
+  color: rgba(185, 16, 47, 1);
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.terms-checkbox input:checked ~ .checkmark:after {
+  display: block;
+  background-color: rgba(78, 164, 135, 1);
+}
+
+/* Style the checkmark/indicator */
+.terms-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid rgba(241, 201, 83, 1);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.send {
+  padding-top: 32px;
+  padding-bottom: 125px;
+}
+.send-button {
+  height: 40px;
+  width: 140px;
+  border: solid 1px rgba(48, 48, 48, 0.5);
+  border-radius: 40px;
+  background-color: unset;
+
+  color: rgba(115, 115, 115, 1);
+  font-family: "Arima";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.send-button:hover {
+  background-color: rgba(78, 164, 135, 1);
+  color: rgba(241, 201, 83, 1);
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
+  border: unset;
+}
+
+.send-button:visited {
+  background-color: rgba(78, 164, 135, 1);
+  color: rgba(241, 201, 83, 1);
+  border: unset;
+}
+
+footer {
+  height: 150px;
+  background-color: green;
+}
