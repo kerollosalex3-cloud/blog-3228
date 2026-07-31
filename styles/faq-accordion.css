@@ -1,15 +1,12 @@
-
-.accordion-item{
+.accordion-item {
   width: 100%;
   background-color: rgba(241, 201, 83, 1);
   border-radius: 12px;
-  align-items: center;
 }
 
 .accordion-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 12px 16px;
   background-color: rgba(241, 201, 83, 1);
@@ -26,7 +23,6 @@
 
   font-size: 1rem;
   font-weight: unset;
-
 }
 
 .accordion-item input {
@@ -37,10 +33,17 @@
   max-height: 200px;
   padding: 12px 16px;
 
-  border: solid 15px rgba(241, 201, 83, 1);
-  border-radius: 12px;
+  border-bottom: solid 15px rgba(241, 201, 83, 1);
+  border-right: solid 15px rgba(241, 201, 83, 1);
+  border-left: solid 15px rgba(241, 201, 83, 1);
+  border-radius: 0px 0px 12px 12px;
 }
 
 .accordion-item input:checked + .accordion-header .icon {
   transform: rotate(180deg);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
 }

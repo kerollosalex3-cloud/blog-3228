@@ -100,7 +100,7 @@ header {
 h2 {
   font-family: "Arima";
   color: rgba(78, 164, 135, 1);
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   font-weight: bold;
 }
 
@@ -127,12 +127,14 @@ p {
 
 .highlights-title {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 
 .faq-section {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .faq-accordion {
@@ -162,7 +164,7 @@ p {
 .contact-header {
   display: flex;
   justify-content: center;
-  padding: 0px 50px;
+  align-items: center;
   gap: 8px;
 }
 
@@ -239,7 +241,7 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   height: 50px;
 
   font-family: "palanquin";
@@ -259,11 +261,9 @@ input[type="submit"]:hover {
 }
 
 /* Customize the label (the container) */
-.terms-checkbox {
+.terms-checkbox{
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -271,7 +271,6 @@ input[type="submit"]:hover {
   -ms-user-select: none;
   user-select: none;
 }
-
 
 /* Hide the browser's default checkbox */
 .terms-checkbox input {
@@ -284,14 +283,12 @@ input[type="submit"]:hover {
 
 /* Create a custom checkbox */
 .checkmark {
-  display: flex;
-  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: none;
   border: solid 2px rgba(84, 55, 13, 1);
   border-radius: 5px;
 }
@@ -316,9 +313,7 @@ input[type="submit"]:hover {
 
 /* Show the checkmark when checked */
 .terms-checkbox input:checked ~ .checkmark:after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   background-color: rgba(78, 164, 135, 1);
 }
 
