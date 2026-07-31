@@ -11,6 +11,16 @@
   font-style: normal;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 header {
   height: 128px;
   padding: 0 80px;
