@@ -21,6 +21,14 @@ main {
   flex: 1;
 }
 
+section {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 80px;
+}
+
 header {
   height: 128px;
   padding: 0 80px;
@@ -100,6 +108,115 @@ header {
   opacity: 1;
 }
 
+/*Headline + Info Start*/
+.headline_info {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.headline {
+  max-width: 902px;
+  max-height: 100%;
+}
+
+.headline h2 {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #4ea487;
+  font-size: 40px;
+  line-height: 120%;
+}
+
+.headline h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+  color: #f1c953;
+}
+
+.headline p {
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  color: #54370d;
+  line-height: 120%;
+  font-size: 32px;
+}
+
+.author_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto;
+  max-width: 272px;
+  padding: 16px;
+  border-radius: 30px;
+  background: #4ea48733;
+}
+
+.author_img {
+  min-width: 120px;
+  min-height: 120px;
+  background-image: url("../../img/1woman.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.author_info h1 {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #54370d;
+  line-height: 120%;
+}
+
+.author_info h2 {
+  line-height: 120%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #54370d;
+}
+
+.author_info p {
+  font-family: "Palanquin";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #54370d;
+}
+
+.frame448 {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.frame448 p {
+  font-family: "Palanquin";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #54370d;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+/*Headline + Info End*/
+
 /*Footer Section Start*/
 footer {
   margin-top: 80px;
@@ -177,6 +294,98 @@ footer a {
   .header_img {
     width: 56px;
     height: 56px;
+  }
+
+  /*Headline + Info Responsive*/
+  .headline_info {
+    width: 100%;
+    max-width: calc(100vw - 30px);
+    margin: 24px auto 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .headline {
+    width: 100%;
+    max-width: 345px;
+  }
+
+  .headline h2 {
+    width: 100%;
+    max-width: 304px;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .headline h1 {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  .headline p {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .frame448 {
+    width: 100%;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px 16px;
+  }
+
+  .frame448 p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .infos {
+    gap: 6px;
+  }
+
+  .author_info {
+    width: 100%;
+    max-width: 345px;
+    min-height: 328px;
+    justify-content: center;
+    padding: 16px 8px;
+    gap: 16px;
+    border-radius: 30px;
+  }
+
+  .author_img {
+    min-width: 120px;
+    min-height: 120px;
+  }
+
+  .author_info h1 {
+    width: 205px;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .author_info h2 {
+    width: 205px;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .author_info p {
+    width: 100%;
+    max-width: 329px;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
   }
 
   /*Footer Rsponsive*/
