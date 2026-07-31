@@ -19,7 +19,7 @@ p {
   font-family: "Palanquin";
 }
 
-.yellow {
+.hero {
   height: 515px;
   background-color: rgba(241, 201, 83, 1);
 
@@ -170,7 +170,7 @@ input[type="submit"]:hover {
 }
 
 /* Customize the label (the container) */
-.terms-checkobx {
+.terms-checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -185,7 +185,7 @@ input[type="submit"]:hover {
 
 
 /* Hide the browser's default checkbox */
-.container input {
+.terms-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -195,13 +195,16 @@ input[type="submit"]:hover {
 
 /* Create a custom checkbox */
 .checkmark {
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
   height: 25px;
   width: 25px;
   background-color: #eee;
-  border: solid 1px rgba(84, 55, 13, 1);
+  border: solid 2px rgba(84, 55, 13, 1);
+  border-radius: 5px;
 }
 
 /* On mouse-over, add a grey background color */
@@ -209,14 +212,14 @@ input[type="submit"]:hover {
   background-color: rgba(241, 201, 83, 1);
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a background */
 .terms-checkbox input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: rgba(78, 164, 135, 1);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: "Please accept the privacy policy.";
+  content: "";
   color: rgba(185, 16, 47, 1);
   position: absolute;
   display: none;
@@ -224,7 +227,9 @@ input[type="submit"]:hover {
 
 /* Show the checkmark when checked */
 .terms-checkbox input:checked ~ .checkmark:after {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(78, 164, 135, 1);
 }
 
