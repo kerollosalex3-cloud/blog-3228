@@ -14,7 +14,7 @@
 }
 
 .slider_a input {
-    z-index: 2;
+  z-index: 2;
 }
 
 .slider_a_wrapper {
@@ -28,12 +28,123 @@
   transition: all 1s ease-in-out;
 }
 
+.element_one_description {
+  position: absolute;
+  top: 54px;
+  left: 38px;
+  padding: 16px 24px;
+
+  text-align: start;
+
+  height: 230px;
+  width: 880px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.element_one_description h2 {
+  font-family: "Palanquin Dark";
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_one_description p {
+  font-family: "Palanquin";
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_two_description {
+  position: absolute;
+  top: 54px;
+  left: 38px;
+  padding: 16px 24px;
+
+  text-align: start;
+
+  height: 230px;
+  width: 880px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.element_two_description h2 {
+  font-family: "Palanquin Dark";
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_two_description p {
+  font-family: "Palanquin";
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_three_description {
+  position: absolute;
+  top: 54px;
+  left: 38px;
+  padding: 16px 24px;
+
+  text-align: start;
+
+  height: 230px;
+  width: 880px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.element_three_description h2 {
+  font-family: "Palanquin Dark";
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_three_description p {
+  font-family: "Palanquin";
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_four_description {
+  position: absolute;
+  top: 54px;
+  left: 38px;
+  padding: 16px 24px;
+
+  text-align: start;
+
+  height: 230px;
+  width: 880px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.element_four_description h2 {
+  font-family: "Palanquin Dark";
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.element_four_description p {
+  font-family: "Palanquin";
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 1);
+}
 
 input[type="radio"] {
-    appearance: none;                                                                                                    
-    width: 1.15em;                                          
-    height: 1.15em;
-    border-radius: 50%;
+  appearance: none;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
 }
 
 input[type="radio"]:after {
@@ -58,7 +169,6 @@ input[type="radio"]:checked:after {
   position: relative;
   background-color: rgba(241, 201, 83, 1);
   border-radius: 20px;
-  content: "";
   display: inline-block;
   visibility: visible;
   border: none;
