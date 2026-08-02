@@ -2,7 +2,7 @@
   position: relative;
   background-color: none;
 
-  width: 1200px;
+  width: 100%;
   height: 533px;
 
   display: flex;
@@ -28,13 +28,11 @@
   transition: all 1s ease-in-out;
 }
 
-.element_one_description {
+.top_left_one {
   position: absolute;
   top: 54px;
-  left: 38px;
+  left: 200px;
   padding: 16px 24px;
-
-  text-align: start;
 
   height: 230px;
   width: 880px;
@@ -42,27 +40,20 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
-}
-
-.element_one_description h2 {
-  font-family: "Palanquin Dark";
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_one_description p {
-  font-family: "Palanquin";
-  font-size: 1.75rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_two_description {
-  position: absolute;
-  top: 54px;
-  left: 38px;
-  padding: 16px 24px;
+  color: white;
 
   text-align: start;
+}
+
+.top_left_one h2 {
+  color: white;
+}
+
+.top_left_two {
+  position: absolute;
+  top: 54px;
+  left: 1750px;
+  padding: 16px 24px;
 
   height: 230px;
   width: 880px;
@@ -70,27 +61,20 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
-}
-
-.element_two_description h2 {
-  font-family: "Palanquin Dark";
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_two_description p {
-  font-family: "Palanquin";
-  font-size: 1.75rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_three_description {
-  position: absolute;
-  top: 54px;
-  left: 38px;
-  padding: 16px 24px;
+  color: white;
 
   text-align: start;
+}
+
+.top_left_two h2 {
+  color: white;
+}
+
+.top_left_three {
+  position: absolute;
+  top: 54px;
+  left: 3270px;
+  padding: 16px 24px;
 
   height: 230px;
   width: 880px;
@@ -98,27 +82,20 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
-}
-
-.element_three_description h2 {
-  font-family: "Palanquin Dark";
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_three_description p {
-  font-family: "Palanquin";
-  font-size: 1.75rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_four_description {
-  position: absolute;
-  top: 54px;
-  left: 38px;
-  padding: 16px 24px;
+  color: white;
 
   text-align: start;
+}
+
+.top_left_three h2 {
+  color: white;
+}
+
+.top_left_four {
+  position: absolute;
+  top: 54px;
+  left: 4810px;
+  padding: 16px 24px;
 
   height: 230px;
   width: 880px;
@@ -126,18 +103,13 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
+  color: white;
+
+  text-align: start;
 }
 
-.element_four_description h2 {
-  font-family: "Palanquin Dark";
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-.element_four_description p {
-  font-family: "Palanquin";
-  font-size: 1.75rem;
-  color: rgba(255, 255, 255, 1);
+.top_left_four h2 {
+  color: white;
 }
 
 input[type="radio"] {
@@ -175,7 +147,7 @@ input[type="radio"]:checked:after {
 }
 
 .slider_a_element {
-  width: calc(100% / 4);
+  width: calc(400% / 4);
   height: 100%;
 }
 
@@ -186,7 +158,6 @@ input[type="radio"]:checked:after {
 .slider_a input[value="two"]:checked ~ .slider_a_wrapper {
   transform: translateX(calc(50% / 4));
 }
-
 .slider_a input[value="three"]:checked ~ .slider_a_wrapper {
   transform: translateX(calc(-50% / 4));
 }
