@@ -8,12 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 30px;
 
   overflow: hidden;
 }
 
 .slider_a input {
-  z-index: 2;
+    z-index: 2;
 }
 
 .slider_a_wrapper {
@@ -27,13 +28,19 @@
   transition: all 1s ease-in-out;
 }
 
+
+input[type="radio"] {
+    appearance: none;                                                                                                    
+    width: 1.15em;                                          
+    height: 1.15em;
+    border-radius: 50%;
+}
+
 input[type="radio"]:after {
   width: 28px;
   height: 28px;
   border-radius: 15px;
   top: -50px;
-  gap: 50px;
-  /*left: -1px;*/
   position: relative;
   background-color: white;
   content: "";
@@ -46,8 +53,8 @@ input[type="radio"]:checked:after {
   width: 40px;
   height: 28px;
   border-radius: 15px;
+  left: -5px;
   top: -50px;
-  /*left: -1px;*/
   position: relative;
   background-color: rgba(241, 201, 83, 1);
   border-radius: 20px;

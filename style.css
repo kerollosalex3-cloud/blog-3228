@@ -157,7 +157,6 @@ p {
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
-  gap: 24px;
   padding: 88px 120px 120px 120px;
 }
 
@@ -166,11 +165,12 @@ p {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  padding-bottom: 24px;
 }
 
 .contact-form {
   width: 100%;
-  padding: 0px 50px;
+  padding: 56px 50px 0px;
   color: rgba(84, 55, 13, 1);
   font-family: "palanquin";
   font-size: 1.5rem;
@@ -250,7 +250,7 @@ input[type="submit"]:hover {
   font-size: 1.125rem;
 }
 
-.terms > a {
+.terms a {
   font-family: "palanquin";
   font-size: 1.125rem;
   color: rgba(78, 164, 135, 1);
@@ -266,11 +266,13 @@ input[type="submit"]:hover {
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  top: -12px;
+  left: -25px;
 }
 
 /* Hide the browser's default checkbox */
@@ -320,8 +322,8 @@ input[type="submit"]:hover {
 
 /* Style the checkmark/indicator */
 .terms-checkbox .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 7px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid rgba(241, 201, 83, 1);
@@ -333,7 +335,6 @@ input[type="submit"]:hover {
 
 .send {
   padding-top: 32px;
-  padding-bottom: 125px;
 }
 .send-button {
   height: 40px;
