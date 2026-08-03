@@ -209,7 +209,7 @@ p {
 
 .message {
   padding-top: 64px;
-  text-align: start
+  text-align: start;
 }
 
 input[type="text"],
@@ -259,7 +259,7 @@ input[type="submit"]:hover {
 }
 
 /* Customize the label (the container) */
-.terms-checkbox{
+.terms-checkbox {
   display: block;
   position: relative;
   cursor: pointer;
@@ -274,7 +274,7 @@ input[type="submit"]:hover {
 
 /* Hide the browser's default checkbox */
 .terms-checkbox input {
-  position: absolute;
+  position: relative;
   opacity: 0;
   cursor: pointer;
   height: 0;
@@ -283,6 +283,7 @@ input[type="submit"]:hover {
 
 /* Create a custom checkbox */
 .checkmark {
+  margin: 10px 0px 0px 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -406,6 +407,11 @@ footer a {
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
 
+  main {
+    padding-left: calc(720px / 2);
+    padding-right: calc(720px / 2);
+  }
+
   footer {
     padding-left: calc((100vw - 1440px) / 2 + 80px);
     padding-right: calc((100vw - 1440px) / 2 + 80px);
@@ -496,6 +502,104 @@ footer a {
 }
 
 @media (max-width: 360px) {
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .highlights-title img {
+    width: 40px;
+  }
+
+  .highlights-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .highlights-text {
+    display: none;
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    padding: unset;
+
+    font-family: "palanquin";
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(84, 55, 13, 1);
+  }
+
+  .faq-section img {
+    width: 40px;
+  }
+
+  .contact-section {
+    padding-top: 80px;
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .contact-header p {
+    display: none;
+  }
+
+  .contact-text {
+    display: none;
+  }
+
+  .contact-section img {
+    width: 40px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    padding: unset;
+  }
+
+  .contact-details {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .contact-details-labels {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .contact-details-inputs {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .name {
+    display: unset;
+  }
+
+  .email {
+    display: unset;
+  }
+
+  .terms p {
+    font-size: 1rem;
+  }
+
+  .terms a {
+    font-size: 1rem;
+  }
+
   footer {
     padding-right: 16px;
     padding-left: 16px;
