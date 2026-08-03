@@ -28,7 +28,7 @@
   transition: all 1s ease-in-out;
 }
 
-.element_one img{
+.element_one img {
   width: 100%;
   height: 533px;
 }
@@ -36,8 +36,8 @@
 .top_left_one {
   position: absolute;
   top: 54px;
-  left: 38px;
   padding: 16px 24px;
+  margin-left: 38px;
 
   height: 230px;
   width: 880px;
@@ -54,17 +54,16 @@
   color: white;
 }
 
-.element_two img{
+.element_two img {
   width: 100%;
   height: 533px;
 }
 
-
 .top_left_two {
   position: absolute;
   top: 54px;
-  left: 1240px;
   padding: 16px 24px;
+  margin-left: 38px;
 
   height: 230px;
   width: 880px;
@@ -81,11 +80,16 @@
   color: white;
 }
 
+.element_three img {
+  width: 100%;
+  height: 533px;
+}
+
 .top_left_three {
   position: absolute;
   top: 54px;
-  left: 2420px;
   padding: 16px 24px;
+  margin-left: 38px;
 
   height: 230px;
   width: 880px;
@@ -102,11 +106,16 @@
   color: white;
 }
 
+.element_four img {
+  width: 100%;
+  height: 533px;
+}
+
 .top_left_four {
   position: absolute;
   top: 54px;
-  left: 3630px;
   padding: 16px 24px;
+  margin-left: 38px;
 
   height: 230px;
   width: 880px;
