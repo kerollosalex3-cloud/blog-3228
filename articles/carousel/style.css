@@ -307,6 +307,110 @@ header {
 }
 /*Carousel End*/
 
+/*Description Section Start*/
+.description {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  font-family: "Palanquin";
+  line-height: 120%;
+}
+
+.description p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Palanquin";
+  line-height: 120%;
+  color: #3d3d3d;
+}
+
+.description ol li {
+  margin-left: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Palanquin";
+  line-height: 120%;
+  color: #3d3d3d;
+}
+
+.text {
+  margin-bottom: 30px;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+b {
+  font-family: "Palanquin";
+  line-height: 120%;
+}
+/*Description Section End*/
+
+/*Pro Tipps Section Start*/
+.pro_tipp {
+  margin-top: 150px;
+  position: relative;
+}
+
+.pro_tipp_text_description {
+  margin-top: 80px;
+  align-self: center;
+  font-family: "Palanquin";
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.pro_tipp_title {
+  position: absolute;
+  top: -40px;
+  left: 110px;
+  width: 196px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #f1c953;
+  background-color: #4ea487;
+  border-radius: 10px;
+  transform: rotate(-13.67deg);
+}
+
+.pro_tipp_title h1 {
+  font-family: "Palanquin";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.pro_tipp_text {
+  margin-top: 65px;
+  margin-left: 74px;
+  padding: 26px 16px 24px;
+  background-color: #4ea48733;
+  border-radius: 30px;
+}
+
+.pro_tipp_text ol li {
+  margin-left: 50px;
+  font-family: "Palanquin";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #3d3d3d;
+}
+
+.pro_tipp_text a {
+  font-family: "Palanquin";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #4ea487;
+  text-decoration: none;
+}
+/*Pro Tipps Section End*/
+
 /*Footer Section Start*/
 footer {
   margin-top: 80px;
@@ -589,6 +693,74 @@ footer a {
     width: 40px;
     border-radius: 50px;
     background-color: #4ea487;
+  }
+
+  .description {
+    width: 100%;
+    max-width: calc(100vw - 30px);
+    margin: 40px auto 0;
+    padding: 0;
+    gap: 32px;
+  }
+
+  .description p,
+  .description ol li {
+    font-size: 16px;
+    line-height: 120%;
+    color: #54370d;
+  }
+
+  .description ol li {
+    margin-left: 18px;
+  }
+
+  .text {
+    padding: 0;
+    gap: 32px;
+  }
+
+  .pro_tipp {
+    width: 100%;
+    max-width: min(343px, calc(100vw - 30px));
+    min-height: 309px;
+    margin: 0 auto;
+  }
+
+  .pro_tipp_title {
+    top: -64px;
+    left: 12px;
+    width: 196px;
+    height: 66px;
+    transform: rotate(-12deg);
+  }
+
+  .pro_tipp_title h1 {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .pro_tipp_text {
+    width: 100%;
+    margin-top: 71px;
+    margin-left: 0;
+    padding: 24px 16px;
+    border-radius: 30px;
+  }
+
+  .pro_tipp_text ol li {
+    margin-left: 18px;
+    font-size: 16px;
+    line-height: 120%;
+    color: #54370d;
+  }
+
+  .pro_tipp_text a {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .pro_tipp_text_description {
+    font-size: 16px;
   }
 
   /*Footer Rsponsive*/
