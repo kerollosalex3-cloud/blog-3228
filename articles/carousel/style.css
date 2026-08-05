@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: clip;
 }
 
 main {
@@ -110,7 +111,7 @@ header {
 
 /*Headline + Info Start*/
 .headline_info {
-  margin-top: 60px;
+  margin-top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -360,6 +361,7 @@ b {
   font-family: "Palanquin";
   font-size: 24px;
   font-weight: 400;
+  line-height: normal;
 }
 
 .pro_tipp_title {
@@ -411,6 +413,135 @@ b {
 }
 /*Pro Tipps Section End*/
 
+/*Share Section Start*/
+.share {
+  position: relative;
+  max-width: 800px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.share h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #000000;
+}
+
+.share-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.share-button {
+  width: 158px;
+  height: 48px;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #f1c953;
+  background-color: #4ea487;
+  border-radius: 40px;
+  transition: transform 0.3s ease;
+}
+
+.share-toggle:focus-visible + .share-button {
+  outline: 2px solid #54370d;
+  outline-offset: 3px;
+}
+
+.share-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.share-button svg {
+  flex: 0 0 auto;
+}
+
+.vector {
+  position: absolute;
+  right: calc(50% + 95px);
+  bottom: 0;
+  pointer-events: none;
+}
+
+.arrow_mobile {
+  display: none;
+}
+
+.share-links {
+  position: absolute;
+  left: calc(50% + 95px);
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0s linear 0.25s;
+}
+
+.share-toggle:checked ~ .share-links {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.share-links a {
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 600;
+  color: #4ea487;
+}
+
+.Share_div {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .share-links,
+  .share-toggle:checked ~ .share-links {
+    transition: none;
+  }
+}
+/*Share Section End*/
+
 /*Footer Section Start*/
 footer {
   margin-top: 80px;
@@ -453,6 +584,33 @@ footer a {
   gap: 16px;
 }
 /*Footer Section End*/
+
+.emptyDiv {
+  display: none;
+  width: 100%;
+  height: 88px;
+}
+
+/*Menu_Bar_Mob*/
+.Menu_Bar_Mob {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 88px;
+  background-color: #f1c953;
+}
+
+.Menu_Bar_Mob div {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
 
 @media (min-width: 1441px) {
   header {
@@ -724,6 +882,7 @@ footer a {
     max-width: min(343px, calc(100vw - 30px));
     min-height: 309px;
     margin: 0 auto;
+    padding: 0 15px;
   }
 
   .pro_tipp_title {
@@ -761,6 +920,79 @@ footer a {
 
   .pro_tipp_text_description {
     font-size: 16px;
+  }
+
+  .share {
+    width: 100%;
+    max-width: min(343px, calc(100vw - 30px));
+    min-height: 250px;
+    margin: 40px auto 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  .share h2 {
+    width: 100%;
+    font-size: clamp(20px, 6.8vw, 24px);
+    line-height: 120%;
+    color: #54370d;
+  }
+
+  .share-button {
+    width: 158px;
+    height: 48px;
+    padding: 0 30px;
+    justify-content: center;
+    gap: 14px;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    border-radius: 40px;
+  }
+
+  .share-button svg {
+    width: 32px;
+    height: 36px;
+  }
+
+  .Share_div {
+    width: 100%;
+    margin-top: 64px;
+    margin-left: 0;
+    padding-bottom: 66px;
+    justify-content: center;
+  }
+
+  .share-links {
+    left: 50%;
+    top: 84px;
+    bottom: auto;
+    align-items: center;
+    white-space: nowrap;
+    transform: translateX(calc(-50% - 10px));
+  }
+
+  .share-toggle:checked ~ .share-links {
+    transform: translateX(-50%);
+  }
+
+  .vector {
+    top: 82px;
+    right: auto;
+    bottom: auto;
+    left: 0;
+  }
+
+  .arrow_desktop {
+    display: none;
+  }
+
+  .arrow_mobile {
+    display: block;
+  }
+
+  .vector svg {
+    width: clamp(32px, 12vw, 48px);
+    height: auto;
   }
 
   /*Footer Rsponsive*/
@@ -819,6 +1051,25 @@ footer a {
     display: block;
     width: clamp(24px, 8vw, 32px);
     height: clamp(24px, 8vw, 32px);
+  }
+
+  /*Menu_Bar_Mob*/
+  .Menu_Bar_Mob {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 88px;
+    padding: 24px clamp(24px, 10.7vw, 40px);
+    gap: 0;
+  }
+
+  .Menu_Bar_Mob div {
+    width: 40px;
+    height: 40px;
+  }
+
+  .emptyDiv {
+    display: block;
   }
 }
 
