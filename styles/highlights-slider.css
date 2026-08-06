@@ -35,6 +35,11 @@
   height: 533px;
 }
 
+.slider_a a{
+  text-decoration: none;
+  color: white;
+}
+
 .highlights_description_one {
   position: absolute;
   top: 54px;
@@ -42,12 +47,14 @@
   margin-left: 38px;
 
   height: 230px;
-  width: 880px;
+  width: calc(100% / 5.6);
 
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
   color: white;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 
   text-align: start;
 }
@@ -67,12 +74,14 @@
   margin-left: 38px;
 
   height: 230px;
-  width: 880px;
+  width: calc(100% / 5.6);
 
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
   color: white;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 
   text-align: start;
 }
@@ -93,12 +102,14 @@
   margin-left: 38px;
 
   height: 230px;
-  width: 880px;
+  width: calc(100% / 5.6);
 
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
   color: white;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 
   text-align: start;
 }
@@ -119,12 +130,14 @@
   margin-left: 38px;
 
   height: 230px;
-  width: 880px;
+  width: calc(100% / 5.6);
 
   background-color: rgba(255, 255, 255, 0.1);
   border-left: solid 1px white;
   border-right: solid 1px white;
   color: white;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 
   text-align: start;
 }
@@ -187,7 +200,7 @@ input[type="radio"]:checked:after {
   transform: translateX(calc(-150% / 4));
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 481px) and (max-width: 786px) {
   .slider_a {
     width: 100%;
     height: 533px;
@@ -199,30 +212,28 @@ input[type="radio"]:checked:after {
 
   .element_one img {
     width: 100%;
-    height: 533px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
   }
 
   .highlights_description_one {
     position: absolute;
     top: 93px;
-    padding: 16px 23px;
-    margin-left: 14px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
 
     height: 190px;
-    width: 260px;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    color: white;
-
-    text-align: start;
+    width: calc(100% / 4.3);
   }
 
-  .highlights_description_one p{
-    text-wrap: nowrap;
+  .highlights_description_one p {
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .highlights_description_one h2 {
@@ -230,32 +241,30 @@ input[type="radio"]:checked:after {
     color: white;
   }
 
-  .element_one img {
+  .element_two img {
     width: 100%;
-    height: 533px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
   }
 
   .highlights_description_two {
     position: absolute;
     top: 93px;
-    padding: 16px 23px;
-    margin-left: 14px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
 
     height: 190px;
-    width: 260px;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    color: white;
-
-    text-align: start;
+    width: calc(100% / 4.3);
   }
 
-  .highlights_description_two p{
-    text-wrap: nowrap;
+  .highlights_description_two p {
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .highlights_description_two h2 {
@@ -265,30 +274,28 @@ input[type="radio"]:checked:after {
 
   .element_three img {
     width: 100%;
-    height: 533px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
   }
 
   .highlights_description_three {
     position: absolute;
     top: 93px;
-    padding: 16px 23px;
-    margin-left: 14px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
 
     height: 190px;
-    width: 260px;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    color: white;
-
-    text-align: start;
+    width: calc(100% / 4.3);
   }
 
-  .highlights_description_three p{
-    text-wrap: nowrap;
+  .highlights_description_three p {
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .highlights_description_three h2 {
@@ -298,30 +305,163 @@ input[type="radio"]:checked:after {
 
   .element_four img {
     width: 100%;
-    height: 533px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
   }
 
   .highlights_description_four {
     position: absolute;
     top: 93px;
-    padding: 16px 23px;
-    margin-left: 14px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
 
     height: 190px;
-    width: 260px;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    color: white;
-
-    text-align: start;
+    width: calc(100% / 4.3);
   }
 
-  .highlights_description_four p{
-    text-wrap: nowrap;
+  .highlights_description_four p {
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .highlights_description_four h2 {
+    font-size: 1.75rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider_a {
+    width: 100%;
+    height: 533px;
+
+    gap: 30px;
+
+    overflow: hidden;
+  }
+
+  .element_one img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
+  }
+
+  .highlights_description_one {
+    position: absolute;
+    top: 93px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
+
+    height: 190px;
+    width: calc(100% / 4.3);
+  }
+
+  .highlights_description_one p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .highlights_description_one h2 {
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .element_two img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
+  }
+
+  .highlights_description_two {
+    position: absolute;
+    top: 93px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
+
+    height: 190px;
+    width: calc(100% / 4.3);
+  }
+
+  .highlights_description_two p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .highlights_description_two h2 {
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .element_three img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
+  }
+
+  .highlights_description_three {
+    position: absolute;
+    top: 93px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
+
+    height: 190px;
+    width: calc(100% / 4.3);
+  }
+
+  .highlights_description_three p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .highlights_description_three h2 {
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .element_four img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 100px;
+  }
+
+  .highlights_description_four {
+    position: absolute;
+    top: 93px;
+    padding: 16px 23px 16px 16px;
+    margin-left: 10px;
+
+    height: 190px;
+    width: calc(100% / 4.3);
+  }
+
+  .highlights_description_four p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .highlights_description_four h2 {

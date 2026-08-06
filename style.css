@@ -185,12 +185,15 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  text-align: start;
 }
 
 .contact-details-inputs {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  text-align: start;
 }
 
 .name {
@@ -203,13 +206,19 @@ p {
 .email {
   display: flex;
   flex-direction: column;
-  text-align: start;
   width: calc(90% / 2);
 }
 
-.message {
-  padding-top: 64px;
+.message-label {
+  width: 100%;
+  padding-top: 32px;
+
   text-align: start;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="text"],
@@ -220,7 +229,7 @@ textarea {
   border-top: unset;
   border-right: unset;
   border-left: unset;
-  border-bottom: 1px solid rgba(84, 55, 13, 1); /* Gray border */
+  border-bottom: 1px solid rgba(84, 55, 13, 1);
   margin-top: 6px;
   margin-bottom: 16px;
   font-size: 1.5rem;
@@ -238,7 +247,6 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 16px;
   height: 50px;
 
@@ -268,7 +276,7 @@ input[type="submit"]:hover {
   -ms-user-select: none;
   user-select: none;
 
-  top: -12px;
+  top:-2px;
   left: -25px;
 }
 
@@ -283,7 +291,6 @@ input[type="submit"]:hover {
 
 /* Create a custom checkbox */
 .checkmark {
-  margin: 10px 0px 0px 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -332,9 +339,11 @@ input[type="submit"]:hover {
 }
 
 .send {
+  display: flex;
+  justify-content: center;
   padding-top: 32px;
 }
-.send-button {
+.send-button:disabled {
   height: 40px;
   width: 140px;
   border: solid 1px rgba(48, 48, 48, 0.5);
@@ -345,6 +354,13 @@ input[type="submit"]:hover {
   font-family: "Arima";
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.send-button:enabled{
+  background-color: rgba(78, 164, 135, 1);
+  color: rgba(241, 201, 83, 1);
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
+  border: unset;
 }
 
 .send-button:hover {
@@ -417,6 +433,31 @@ footer a {
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1279px){
+  main{
+    padding: 0px 20px;
+  }
+
+  .highlights-section{
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .faq-section{
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .faq-accordion{
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+  .contact-section{
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
 
 @media (max-width: 768px) {
   html,
@@ -440,6 +481,127 @@ footer a {
   .header_img {
     width: 56px;
     height: 56px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  } s
+
+  .highlights-title img {
+    width: 40px;
+  }
+
+  .highlights-section {
+    padding: 80px 20px 80px;
+  }
+
+  .highlights-text {
+    display: none;
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    padding: 80px 20px;
+
+    font-family: "palanquin";
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(84, 55, 13, 1);
+  }
+
+  .faq-section img {
+    width: 40px;
+  }
+
+  .contact-section {
+    padding: 0px 20px;
+  }
+
+  .contact-header p {
+    display: none;
+  }
+
+  .contact-text {
+    display: none;
+  }
+
+  .contact-section img {
+    width: 40px;
+  }
+
+  .contact-section h2 {
+    font-size: 38px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: unset;
+
+    text-align: start;
+  }
+
+  .contact-details {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .contact-details-labels {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .contact form label {
+    padding-top: 32px;
+  }
+
+  .contact-details-inputs {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  input[type="text"],
+  select,
+  textarea {
+    height: 65px;
+  }
+
+  .name {
+    display: unset;
+    padding-top: 32px;
+  }
+
+  .email {
+    display: unset;
+    padding-top: 32px;
+  }
+
+  .message-label {
+    padding-top: unset;
+  }
+
+  .message {
+    display: unset;
+    margin-top: 32px;
+  }
+
+  .terms p {
+    font-size: 1rem;
+  }
+
+  .terms a {
+    font-size: 1rem;
+  }
+
+  .send{
+    display: flex;
+    justify-content: center;
   }
 
   /*Footer Rsponsive*/
@@ -501,23 +663,17 @@ footer a {
   }
 }
 
-@media (max-width: 360px) {
-  main {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
+@media screen and (min-width: 361px) and (max-width: 480px) {
   h2 {
     font-size: 2.5rem;
-  }
+  } s
 
   .highlights-title img {
     width: 40px;
   }
 
   .highlights-section {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 80px 20px 80px;
   }
 
   .highlights-text {
@@ -530,7 +686,7 @@ footer a {
     align-items: center;
     gap: 32px;
 
-    padding: unset;
+    padding: 80px 20px;
 
     font-family: "palanquin";
     font-size: 1rem;
@@ -543,9 +699,7 @@ footer a {
   }
 
   .contact-section {
-    padding-top: 80px;
-    padding-left: unset;
-    padding-right: unset;
+    padding: 0px 20px;
   }
 
   .contact-header p {
@@ -560,13 +714,18 @@ footer a {
     width: 40px;
   }
 
+  .contact-section h2 {
+    font-size: 38px;
+  }
+
   .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-
     padding: unset;
+
+    text-align: start;
   }
 
   .contact-details {
@@ -579,17 +738,38 @@ footer a {
     display: unset;
   }
 
+  .contact form label {
+    padding-top: 32px;
+  }
+
   .contact-details-inputs {
     padding-top: 32px;
     display: unset;
   }
 
+  input[type="text"],
+  select,
+  textarea {
+    height: 65px;
+  }
+
   .name {
     display: unset;
+    padding-top: 32px;
   }
 
   .email {
     display: unset;
+    padding-top: 32px;
+  }
+
+  .message-label {
+    padding-top: unset;
+  }
+
+  .message {
+    display: unset;
+    margin-top: 32px;
   }
 
   .terms p {
@@ -598,6 +778,140 @@ footer a {
 
   .terms a {
     font-size: 1rem;
+  }
+
+  .send{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .highlights-title img {
+    width: 40px;
+  }
+
+  .highlights-section {
+    padding: 80px 20px 80px;
+  }
+
+  .highlights-text {
+    display: none;
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    padding: 80px 20px;
+
+    font-family: "palanquin";
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(84, 55, 13, 1);
+  }
+
+  .faq-section img {
+    width: 40px;
+  }
+
+  .contact-section {
+    padding: 0px 20px;
+  }
+
+  .contact-header p {
+    display: none;
+  }
+
+  .contact-text {
+    display: none;
+  }
+
+  .contact-section img {
+    width: 40px;
+  }
+
+  .contact-section h2 {
+    font-size: 38px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: unset;
+
+    text-align: start;
+  }
+
+  .contact-details {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .contact-details-labels {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  .contact form label {
+    padding-top: 32px;
+  }
+
+  .contact-details-inputs {
+    padding-top: 32px;
+    display: unset;
+  }
+
+  input[type="text"],
+  select,
+  textarea {
+    height: 65px;
+  }
+
+  .name {
+    display: unset;
+    padding-top: 32px;
+  }
+
+  .email {
+    display: unset;
+    padding-top: 32px;
+  }
+
+  .message-label {
+    padding-top: unset;
+  }
+
+  .message {
+    display: unset;
+    margin-top: 32px;
+  }
+
+  .terms{
+    align-items: start;
+    gap: 8px;
+  }
+
+  .terms p {
+    font-size: 1rem;
+  }
+
+  .terms a {
+    font-size: 1rem;
+  }
+
+  .send{
+    display: flex;
+    justify-content: center;
   }
 
   footer {
