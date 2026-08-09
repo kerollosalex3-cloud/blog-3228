@@ -133,11 +133,10 @@ p {
   gap: 8px;
 }
 
-.highlights-text{
+.highlights-text {
   padding: 24px 0px 88px;
   font-size: 1.5rem;
 }
-
 
 .faq-section {
   display: flex;
@@ -438,7 +437,7 @@ footer a {
   gap: 16px;
 }
 
-.nav-bar-mobile{
+.nav-bar-mobile {
   width: 100%;
   height: 88px;
   background-color: rgba(241, 201, 83, 1);
@@ -452,7 +451,7 @@ footer a {
   padding: 10px 0px;
 }
 
-.nav-bar-mobile img{
+.nav-bar-mobile img {
   height: 40px;
   width: 40px;
 }
@@ -514,7 +513,7 @@ footer a {
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
 
-  .nav-bar-mobile{
+  .nav-bar-mobile {
     display: none;
   }
 }
@@ -539,7 +538,7 @@ footer a {
     display: none;
   }
 
-  .nav-bar-mobile{
+  .nav-bar-mobile {
     display: none;
   }
 }
@@ -561,7 +560,7 @@ footer a {
     display: none;
   }
 
-  .nav-bar-mobile{
+  .nav-bar-mobile {
     display: none;
   }
 }
@@ -596,6 +595,34 @@ footer a {
 
   h2 {
     font-size: 2.5rem;
+  }
+
+  .hero-section {
+    width: 100%;
+    background-color: unset;
+    background-image: url(./assets/img/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: flex-start;
+  }
+
+  .hero-img{
+    width: 60%;
+    height: 55%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    align-self: flex-end;
+    justify-self: anchor-center;
+  }
+
+  .hero-text{
+    display: none;
   }
 
   .highlights-title img {
@@ -782,6 +809,35 @@ footer a {
   h2 {
     font-size: 2.5rem;
   }
+
+  .hero-section {
+    width: 100%;
+    background-color: unset;
+    background-image: url(./assets/img/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: flex-start;
+  }
+
+  .hero-img {
+    width: 60%;
+    height: 55%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    align-self: flex-end;
+    justify-self: anchor-center;
+  }
+
+  .hero-text {
+    display: none;
+  }
+
   .highlights-title img {
     width: 40px;
   }
@@ -906,6 +962,34 @@ footer a {
   }
   h2 {
     font-size: 2.5rem;
+  }
+
+  .hero-section {
+    width: 100%;
+    background-color: unset;
+    background-image: url(./assets/img/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: flex-start;
+  }
+
+  .hero-img {
+    width: 60%;
+    height: 55%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    align-self: flex-end;
+    justify-self: anchor-center;
+  }
+
+  .hero-text {
+    display: none;
   }
 
   .highlights-title img {
