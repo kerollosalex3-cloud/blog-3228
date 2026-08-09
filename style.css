@@ -15,6 +15,7 @@ body {
 
 main {
   flex: 1;
+  padding: 0px 120px;
 }
 
 header {
@@ -97,6 +98,13 @@ header {
   opacity: 1;
 }
 
+.hero {
+  height: 515px;
+  background-color: rgba(241, 201, 83, 1);
+
+  padding: 0px 0px 106px 0px;
+}
+
 h2 {
   font-family: "Arima";
   color: rgba(78, 164, 135, 1);
@@ -108,13 +116,6 @@ p {
   font-family: "Palanquin";
 }
 
-.hero {
-  height: 515px;
-  background-color: rgba(241, 201, 83, 1);
-
-  padding: 0px 0px 106px 0px;
-}
-
 .highlights-section {
   display: flex;
   flex-direction: column;
@@ -122,7 +123,7 @@ p {
   text-align: center;
   gap: 24px;
 
-  padding: 88px 120px 120px;
+  padding: 88px 0px;
 }
 
 .highlights-title {
@@ -143,7 +144,7 @@ p {
   align-items: center;
   gap: 32px;
 
-  padding: 88px 120px 120px 120px;
+  padding: 88px 0px 120px;
 
   font-family: "palanquin";
   font-size: 1.5rem;
@@ -157,7 +158,7 @@ p {
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
-  padding: 88px 120px 120px 120px;
+  padding: 88px 0px 120px;
 }
 
 .contact-header {
@@ -276,7 +277,7 @@ input[type="submit"]:hover {
   -ms-user-select: none;
   user-select: none;
 
-  top:-2px;
+  top: -2px;
   left: -25px;
 }
 
@@ -309,6 +310,11 @@ input[type="submit"]:hover {
 /* When the checkbox is checked, add a background */
 .terms-checkbox input:checked ~ .checkmark {
   background-color: rgba(78, 164, 135, 1);
+}
+
+.checkmark:before ~ .send-button:disabled {
+  display: flex;
+  justify-content: center;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -356,7 +362,7 @@ input[type="submit"]:hover {
   font-weight: bold;
 }
 
-.send-button:enabled{
+.send-button:enabled {
   background-color: rgba(78, 164, 135, 1);
   color: rgba(241, 201, 83, 1);
   text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
@@ -423,9 +429,45 @@ footer a {
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
 
+  .hero {
+    margin: 0px 120px;
+    background-image: url(./assets/img/hero.png);
+    background-color: unset;
+    position: relative;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 340px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero h1{
+    font-family: 'arima';
+    font-size: 3.5rem;
+    font-weight: bold;
+
+  }
+
+  .hero p {
+    font-size: 1.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
   main {
-    padding-left: calc(720px / 2);
-    padding-right: calc(720px / 2);
+    padding: 0px max(120px, calc(50% - 720px));
+  }
+
+  .highlights-section {
+    padding-left: unset;
+    padding-right: unset;
   }
 
   footer {
@@ -433,29 +475,43 @@ footer a {
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1279px){
-  main{
+
+@media screen and (max-width: 1440px) {
+  .hero {
+    height: 515px;
+    background-color: rgba(241, 201, 83, 1);
+
+    padding: 0px 0px 106px 0px;
+  }
+
+  .hero img{
+    display: none;
+  }
+
+  .hero h1 {
+    display: none;
+  }
+
+  .hero p {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  main {
     padding: 0px 20px;
   }
 
-  .highlights-section{
-    padding-left: unset;
-    padding-right: unset;
+  .hero img {
+    display: none;
   }
 
-  .faq-section{
-    padding-left: unset;
-    padding-right: unset;
+  .hero h1 {
+    display: none;
   }
 
-  .faq-accordion{
-    padding-left: unset;
-    padding-right: unset;
-  }
-
-  .contact-section{
-    padding-left: unset;
-    padding-right: unset;
+  .hero p {
+    display: none;
   }
 }
 
@@ -483,16 +539,20 @@ footer a {
     height: 56px;
   }
 
+  main {
+    padding: 0px 20px;
+  }
+
   h2 {
     font-size: 2.5rem;
-  } s
+  }
 
   .highlights-title img {
     width: 40px;
   }
 
   .highlights-section {
-    padding: 80px 20px 80px;
+    padding: 80px 0px;
   }
 
   .highlights-text {
@@ -505,7 +565,7 @@ footer a {
     align-items: center;
     gap: 32px;
 
-    padding: 80px 20px;
+    padding: 80px 0px;
 
     font-family: "palanquin";
     font-size: 1rem;
@@ -599,7 +659,7 @@ footer a {
     font-size: 1rem;
   }
 
-  .send{
+  .send {
     display: flex;
     justify-content: center;
   }
@@ -664,16 +724,19 @@ footer a {
 }
 
 @media screen and (min-width: 361px) and (max-width: 480px) {
+  main {
+    padding: 0px 20px;
+  }
+
   h2 {
     font-size: 2.5rem;
-  } s
-
+  }
   .highlights-title img {
     width: 40px;
   }
 
   .highlights-section {
-    padding: 80px 20px 80px;
+    padding: 80px 0px;
   }
 
   .highlights-text {
@@ -686,7 +749,7 @@ footer a {
     align-items: center;
     gap: 32px;
 
-    padding: 80px 20px;
+    padding: 80px 0px;
 
     font-family: "palanquin";
     font-size: 1rem;
@@ -699,7 +762,7 @@ footer a {
   }
 
   .contact-section {
-    padding: 0px 20px;
+    padding: 0px;
   }
 
   .contact-header p {
@@ -780,13 +843,16 @@ footer a {
     font-size: 1rem;
   }
 
-  .send{
+  .send {
     display: flex;
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 360px) {
+  main {
+    padding: 0px 20px;
+  }
   h2 {
     font-size: 2.5rem;
   }
@@ -796,7 +862,7 @@ footer a {
   }
 
   .highlights-section {
-    padding: 80px 20px 80px;
+    padding: 80px 0px;
   }
 
   .highlights-text {
@@ -809,7 +875,7 @@ footer a {
     align-items: center;
     gap: 32px;
 
-    padding: 80px 20px;
+    padding: 80px 0px;
 
     font-family: "palanquin";
     font-size: 1rem;
@@ -822,7 +888,7 @@ footer a {
   }
 
   .contact-section {
-    padding: 0px 20px;
+    padding: 0px;
   }
 
   .contact-header p {
@@ -896,8 +962,10 @@ footer a {
     margin-top: 32px;
   }
 
-  .terms{
-    align-items: start;
+  .terms {
+    width: 80%;
+    left: -20px;
+    align-items: center;
     gap: 8px;
   }
 
@@ -909,7 +977,7 @@ footer a {
     font-size: 1rem;
   }
 
-  .send{
+  .send {
     display: flex;
     justify-content: center;
   }
