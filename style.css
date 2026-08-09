@@ -15,6 +15,7 @@ body {
 
 main {
   flex: 1;
+  width: 100%;
   padding: 0px 120px;
 }
 
@@ -98,11 +99,11 @@ header {
   opacity: 1;
 }
 
-.hero {
+.hero-section {
   height: 515px;
   background-color: rgba(241, 201, 83, 1);
-
-  padding: 0px 0px 106px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -121,7 +122,7 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 24px;
+  gap: 106px 24px 0px;
 
   padding: 88px 0px;
 }
@@ -131,6 +132,12 @@ p {
   align-items: center;
   gap: 8px;
 }
+
+.highlights-text{
+  padding: 24px 0px 88px;
+  font-size: 1.5rem;
+}
+
 
 .faq-section {
   display: flex;
@@ -312,14 +319,10 @@ input[type="submit"]:hover {
   background-color: rgba(78, 164, 135, 1);
 }
 
-.checkmark:before ~ .send-button:disabled {
-  display: flex;
-  justify-content: center;
-}
-
 /* Create the checkmark/indicator (hidden when not checked) */
+
 .checkmark:after {
-  content: "";
+  content: "ppp";
   color: rgba(185, 16, 47, 1);
   position: absolute;
   display: none;
@@ -329,6 +332,20 @@ input[type="submit"]:hover {
 .terms-checkbox input:checked ~ .checkmark:after {
   display: block;
   background-color: rgba(78, 164, 135, 1);
+}
+
+.send-button:checked {
+  height: 40px;
+  width: 140px;
+  background-color: rgba(78, 164, 135, 1);
+  border: unset;
+  border-radius: 40px;
+
+  font-family: "Arima";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(241, 201, 83, 1);
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* Style the checkmark/indicator */
@@ -363,10 +380,7 @@ input[type="submit"]:hover {
 }
 
 .send-button:enabled {
-  background-color: rgba(78, 164, 135, 1);
-  color: rgba(241, 201, 83, 1);
-  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
-  border: unset;
+  display: none;
 }
 
 .send-button:hover {
@@ -429,29 +443,39 @@ footer a {
     padding-right: calc((100vw - 1440px) / 2 + 80px);
   }
 
+  .hero-section {
+    background-color: unset;
+  }
+
   .hero {
-    margin: 0px 120px;
+    width: 1440px;
     background-image: url(./assets/img/hero.png);
     background-color: unset;
     position: relative;
+    background-repeat: no-repeat;
+  }
+
+  .hero-circle {
+    position: absolute;
+    justify-self: end;
+    align-self: center;
   }
 
   .hero-text {
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 32px;
     width: 340px;
-    position: absolute;
     top: 50%;
-    left: 25%;
+    left: 20%;
     transform: translate(-50%, -50%);
   }
 
-  .hero h1{
-    font-family: 'arima';
+  .hero h1 {
+    font-family: "arima";
     font-size: 3.5rem;
     font-weight: bold;
-
   }
 
   .hero p {
@@ -462,12 +486,7 @@ footer a {
   }
 
   main {
-    padding: 0px max(120px, calc(50% - 720px));
-  }
-
-  .highlights-section {
-    padding-left: unset;
-    padding-right: unset;
+    padding: 0px calc((100vw - 1440px) / 2 + 0px);
   }
 
   footer {
@@ -484,7 +503,7 @@ footer a {
     padding: 0px 0px 106px 0px;
   }
 
-  .hero img{
+  .hero img {
     display: none;
   }
 
