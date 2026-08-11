@@ -4,6 +4,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -251,6 +252,7 @@ input[type="submit"]:hover {
 }
 
 .terms {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,19 +279,18 @@ input[type="submit"]:hover {
 .terms-checkbox {
   display: block;
   position: relative;
+  padding: 0px 0px 11px 26px;
+  margin-bottom: 12px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
-  top: -2px;
-  left: -25px;
 }
 
 /* Hide the browser's default checkbox */
 .terms-checkbox input {
-  position: relative;
+  position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
@@ -319,11 +320,10 @@ input[type="submit"]:hover {
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-
 .checkmark:after {
-  content: "ppp";
+  content: "";
   color: rgba(185, 16, 47, 1);
-  position: absolute;
+  position: relative;
   display: none;
 }
 
@@ -331,20 +331,6 @@ input[type="submit"]:hover {
 .terms-checkbox input:checked ~ .checkmark:after {
   display: block;
   background-color: rgba(78, 164, 135, 1);
-}
-
-.send-button:checked {
-  height: 40px;
-  width: 140px;
-  background-color: rgba(78, 164, 135, 1);
-  border: unset;
-  border-radius: 40px;
-
-  font-family: "Arima";
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgba(241, 201, 83, 1);
-  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* Style the checkmark/indicator */
@@ -360,12 +346,31 @@ input[type="submit"]:hover {
   transform: rotate(45deg);
 }
 
+.terms-checkbox input:checked ~ .action-btn:after{
+  height: 40px;
+  width: 140px;
+  background-color: rgba(78, 164, 135, 1);
+  border: unset;
+  border-radius: 40px;
+
+  font-family: "Arima";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(241, 201, 83, 1);
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
+
+  pointer-events: all;
+  cursor: pointer;
+}
+
 .send {
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 32px;
+  padding-top: 40px;
 }
-.send-button:disabled {
+
+.action-btn {
   height: 40px;
   width: 140px;
   border: solid 1px rgba(48, 48, 48, 0.5);
@@ -376,10 +381,23 @@ input[type="submit"]:hover {
   font-family: "Arima";
   font-size: 1.5rem;
   font-weight: bold;
+
+  pointer-events: none;
+  cursor: default;
 }
 
-.send-button:enabled {
-  display: none;
+.send-button-enabled {
+  height: 40px;
+  width: 140px;
+  background-color: rgba(78, 164, 135, 1);
+  border: unset;
+  border-radius: 40px;
+
+  font-family: "Arima";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(241, 201, 83, 1);
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .send-button:hover {
@@ -501,6 +519,7 @@ footer a {
     font-size: 1.75rem;
     display: -webkit-box;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
   }
 
@@ -606,7 +625,7 @@ footer a {
     justify-content: flex-start;
   }
 
-  .hero-img{
+  .hero-img {
     width: 60%;
     height: 55%;
     position: relative;
@@ -621,16 +640,21 @@ footer a {
     justify-self: anchor-center;
   }
 
-  .hero-text{
+  .hero-text {
     display: none;
-  }
-
-  .highlights-title img {
-    width: 40px;
   }
 
   .highlights-section {
     padding: 80px 0px;
+    gap: 0px 8px;
+  }
+
+  .highlights-title {
+    padding-bottom: 32px;
+  }
+
+  .highlights-title img {
+    width: 40px;
   }
 
   .highlights-text {
@@ -843,7 +867,7 @@ footer a {
   }
 
   .highlights-section {
-    padding: 80px 0px;
+    padding: 80px 20px;
   }
 
   .highlights-text {
@@ -864,12 +888,16 @@ footer a {
     color: rgba(84, 55, 13, 1);
   }
 
+  .faq-section {
+    padding: 0px 20px;
+  }
+
   .faq-section img {
     width: 40px;
   }
 
   .contact-section {
-    padding: 0px;
+    padding: 0px 20px;
   }
 
   .contact-header p {
@@ -942,6 +970,14 @@ footer a {
     margin-top: 32px;
   }
 
+  .terms {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .terms-text {
+    justify-content: end;
+  }
+
   .terms p {
     font-size: 1rem;
   }
@@ -957,9 +993,10 @@ footer a {
 }
 
 @media screen and (max-width: 360px) {
-  main {
+  /*main {
     padding: 0px 20px;
-  }
+  }*/
+
   h2 {
     font-size: 2.5rem;
   }
@@ -992,6 +1029,10 @@ footer a {
     display: none;
   }
 
+  .highlights-section {
+    padding: 0px 20px;
+  }
+
   .highlights-title img {
     width: 40px;
   }
@@ -1002,6 +1043,10 @@ footer a {
 
   .highlights-text {
     display: none;
+  }
+
+  .faq-section {
+    padding: 0px 20px;
   }
 
   .faq-accordion {
@@ -1023,7 +1068,7 @@ footer a {
   }
 
   .contact-section {
-    padding: 0px;
+    padding: 0px 20px;
   }
 
   .contact-header p {
@@ -1098,17 +1143,8 @@ footer a {
   }
 
   .terms {
-    width: 80%;
-    left: -20px;
-    align-items: center;
+    width: 100%;
     gap: 8px;
-  }
-
-  .terms p {
-    font-size: 1rem;
-  }
-
-  .terms a {
     font-size: 1rem;
   }
 
