@@ -631,6 +631,10 @@ footer a {
     overflow-x: hidden;
   }
 
+  main {
+    margin-bottom: 0;
+  }
+
   .header_links {
     display: none;
   }
@@ -866,6 +870,7 @@ footer a {
     font-size: 16px;
     line-height: 120%;
     color: #54370d;
+    margin-bottom: 50px;
   }
 
   .description ol li {
@@ -925,7 +930,7 @@ footer a {
   .share {
     width: 100%;
     max-width: min(343px, calc(100vw - 30px));
-    min-height: 250px;
+    min-height: auto;
     margin: 40px auto 0;
     padding: 0;
     gap: 0;
@@ -958,8 +963,12 @@ footer a {
     width: 100%;
     margin-top: 64px;
     margin-left: 0;
-    padding-bottom: 66px;
+    padding-bottom: 0;
     justify-content: center;
+  }
+
+  .share:has(.share-toggle:checked) .Share_div {
+    padding-bottom: 66px;
   }
 
   .share-links {
@@ -1001,7 +1010,7 @@ footer a {
     max-width: 100%;
     min-height: 134px;
     height: auto;
-    margin-top: 88px;
+    margin: 40px 0 0;
     padding: 30px clamp(16px, 6.4vw, 24px);
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -1055,6 +1064,7 @@ footer a {
 
   /*Menu_Bar_Mob*/
   .Menu_Bar_Mob {
+    position: static;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -1069,7 +1079,7 @@ footer a {
   }
 
   .emptyDiv {
-    display: block;
+    display: none;
   }
 }
 
